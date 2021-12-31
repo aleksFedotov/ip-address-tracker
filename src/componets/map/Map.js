@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Spinner from '../ui/spinner/Spinner';
 
 import {
   MapContainer,

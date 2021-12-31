@@ -6,10 +6,10 @@ import Spinner from '../ui/spinner/Spinner';
 const ResultDisplay = () => {
   const trackerCtx = useContext(TrackerCotext);
 
-  const { ipAddress, city, timeZone, isp } = trackerCtx;
+  const { ipAddress, city, timeZone, isp, searchIP } = trackerCtx;
 
   useEffect(() => {
-    trackerCtx.searchIP();
+    searchIP();
   }, []);
 
   return (

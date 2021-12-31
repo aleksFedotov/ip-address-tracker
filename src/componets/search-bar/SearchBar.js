@@ -3,7 +3,6 @@ import '../../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import TrackerCotext from '../../store/tracker-context';
-import { Fragment } from 'react/cjs/react.production.min';
 
 const SearchBar = () => {
   const [inputText, setInputText] = useState('');
