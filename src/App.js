@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <div className="hero"></div>
       <h1 className="main-header">IP Address Tracker</h1>
+
       <SearchBar />
       <ResultDisplay />
       <Map />

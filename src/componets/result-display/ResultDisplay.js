@@ -1,23 +1,34 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import TrackerCotext from '../../store/tracker-context';
+
+import Spinner from '../ui/spinner/Spinner';
 
 const ResultDisplay = () => {
+  const trackerCtx = useContext(TrackerCotext);
+
+  const { ipAddress, city, timeZone, isp } = trackerCtx;
+
+  useEffect(() => {
+    trackerCtx.searchIP();
+  }, []);
+
   return (
     <div className="results">
       <div className="results__content">
         <h6 className="results__header">ip address</h6>
-        <p className="result__data">192.212.174.101</p>
+        <p className="result__data">{ipAddress ? ipAddress : <Spinner />}</p>
       </div>
       <div className="results__content">
         <h6 className="results__header">location</h6>
-        <p className="result__data">Brooklyn, NY, 10001</p>
+        <p className="result__data">{city ? city : <Spinner />}</p>
       </div>
       <div className="results__content">
         <h6 className="results__header">timezone</h6>
-        <p className="result__data">UTC -05:00</p>
+        <p className="result__data">{timeZone ? timeZone : <Spinner />}</p>
       </div>
       <div className="results__content">
         <h6 className="results__header">isp</h6>
-        <p className="result__data">SpaceX Starlink</p>
+        <p className="result__data">{isp ? isp : <Spinner />}</p>
       </div>
     </div>
   );
