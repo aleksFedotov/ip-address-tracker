@@ -58,6 +58,7 @@ const TrackerContextProvider = (props) => {
         location: trackerData.location,
         error: trackerData.error,
         searchIP: searchIP,
+        error: false,
       }}
     >
       {props.children}
