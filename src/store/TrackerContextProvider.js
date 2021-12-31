@@ -35,6 +35,7 @@ const TrackerContextProvider = (props) => {
         timeZone: `UTC ${resData.location.timezone}`,
         isp: resData.isp,
         location: [resData.location.lat, resData.location.lng],
+        error: false,
       });
     };
 
@@ -58,7 +59,6 @@ const TrackerContextProvider = (props) => {
         location: trackerData.location,
         error: trackerData.error,
         searchIP: searchIP,
-        error: false,
       }}
     >
       {props.children}
