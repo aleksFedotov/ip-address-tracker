@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/ip-address-tracker/static/css/main.49e0e366.css",
+    "main.js": "/ip-address-tracker/static/js/main.c42f38fa.js",
+    "static/media/pattern-bg.png": "/ip-address-tracker/static/media/pattern-bg.a60a3c85aa8b88aac4b7.png",
+    "index.html": "/ip-address-tracker/index.html",
+    "main.49e0e366.css.map": "/ip-address-tracker/static/css/main.49e0e366.css.map",
+    "main.c42f38fa.js.map": "/ip-address-tracker/static/js/main.c42f38fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49e0e366.css",
+    "static/js/main.c42f38fa.js"
+  ]
+}
