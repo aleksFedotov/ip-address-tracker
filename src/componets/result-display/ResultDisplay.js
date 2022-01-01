@@ -6,7 +6,7 @@ import Spinner from '../ui/spinner/Spinner';
 const ResultDisplay = () => {
   const trackerCtx = useContext(TrackerCotext);
 
-  const { ipAddress, city, timeZone, isp, searchIP } = trackerCtx;
+  const { ipAddress, city, timeZone, isp, searchIP, isLoading } = trackerCtx;
 
   useEffect(() => {
     searchIP();
@@ -15,20 +15,20 @@ const ResultDisplay = () => {
   return (
     <div className="results">
       <div className="results__content">
-        <h6 className="results__header">ip address</h6>
-        <p className="result__data">{ipAddress ? ipAddress : <Spinner />}</p>
+        <h2 className="results__header">ip address</h2>
+        <p className="result__data">{!isLoading ? ipAddress : <Spinner />}</p>
       </div>
       <div className="results__content">
-        <h6 className="results__header">location</h6>
-        <p className="result__data">{city ? city : <Spinner />}</p>
+        <h2 className="results__header">location</h2>
+        <p className="result__data">{!isLoading ? city : <Spinner />}</p>
       </div>
       <div className="results__content">
-        <h6 className="results__header">timezone</h6>
-        <p className="result__data">{timeZone ? timeZone : <Spinner />}</p>
+        <h2 className="results__header">timezone</h2>
+        <p className="result__data">{!isLoading ? timeZone : <Spinner />}</p>
       </div>
       <div className="results__content">
-        <h6 className="results__header">isp</h6>
-        <p className="result__data">{isp ? isp : <Spinner />}</p>
+        <h2 className="results__header">isp</h2>
+        <p className="result__data">{!isLoading ? isp : <Spinner />}</p>
       </div>
     </div>
   );

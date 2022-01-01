@@ -6,6 +6,8 @@ const TrackerCotext = createContext({
   timeZone: '',
   isp: '',
   location: [0, 0],
+  error: false,
+  isLoading: true,
   searchIP: () => {},
 });
 

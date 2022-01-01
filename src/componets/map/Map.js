@@ -35,26 +35,24 @@ const Map = () => {
 
   return (
     <main>
-      {trackerCtx.ipAddress && (
-        <MapContainer
-          center={position}
-          zoom={15}
-          scrollWheelZoom={false}
-          style={{ height: '100%', width: '100vw' }}
-          zoomControl={false}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <ZoomControl position="bottomright" />
-          <ChangeView center={position} zoom={15} />
+      <MapContainer
+        center={position}
+        zoom={15}
+        scrollWheelZoom={false}
+        style={{ height: '100%', width: '100vw' }}
+        zoomControl={false}
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <ZoomControl position="bottomright" />
+        <ChangeView center={position} zoom={15} />
 
-          <Marker position={position} icon={markerIcon}>
-            <Popup></Popup>
-          </Marker>
-        </MapContainer>
-      )}
+        <Marker position={position} icon={markerIcon}>
+          <Popup></Popup>
+        </Marker>
+      </MapContainer>
     </main>
   );
 };

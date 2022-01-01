@@ -111,7 +111,8 @@
   background-color: #fff;
   border-radius: 1rem;
   max-width: 111rem;
-  min-width: calc(100vw - 4rem);
+
+  min-width: 111rem;
   width: fit-content;
 
   display: grid;
@@ -165,6 +166,7 @@ main {
 @media screen and (max-width: 1150px) {
   .results {
     grid-template-columns: repeat(3, 1fr);
+    min-width: calc(100vw - 4rem);
   }
 
   .results__content:last-child {

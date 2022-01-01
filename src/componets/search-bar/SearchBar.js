@@ -17,7 +17,7 @@ const SearchBar = () => {
     trackerCtx.searchIP(inputText);
   };
   return (
-    <div className="search__wrapper">
+    <section className="search__wrapper">
       {trackerCtx.error && (
         <div className="error">
           Input correct search term (IPv4,IPv6,domain)
@@ -33,11 +33,15 @@ const SearchBar = () => {
             value={inputText}
           />
         </form>
-        <button className="btn__submit" onClick={submitHandler}>
+        <button
+          className="btn__submit"
+          onClick={submitHandler}
+          aria-label="submit"
+        >
           <FontAwesomeIcon icon={faChevronRight} className="chevron" />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
