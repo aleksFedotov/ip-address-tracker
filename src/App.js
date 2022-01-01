@@ -7,9 +7,7 @@ function App() {
   return (
     <div className="App">
       <div className="hero"></div>
-      <h1 role="banner" className="main-header">
-        IP Address Tracker
-      </h1>
+      <h1 className="main-header">IP Address Tracker</h1>
 
       <SearchBar />
       <ResultDisplay />
